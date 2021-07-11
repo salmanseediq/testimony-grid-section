@@ -9,6 +9,7 @@
   --light-gray: hsl(0, 0%, 81%);
   --light-grayish-blue: hsl(210, 46%, 95%);
 }
+
 /********LAYOUT*******/
 body {
   font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
@@ -30,17 +31,6 @@ body {
     "profile4"
     "profile5";
   grid-gap: 50px;
-}
-
-@media (min-width: 675px) {
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50% 50%;
-    grid-template-areas:
-      "profile1 profile1 profile2 profile5"
-      "profile3 profile4 profile4 profile5";
-  }
 }
 
 .profile-1 {
@@ -71,6 +61,17 @@ body {
   grid-area: profile5;
   background-color: var(--white);
   border-radius: 10px;
+}
+
+@media (min-width: 675px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "profile1 profile1 profile2 profile5"
+      "profile3 profile4 profile4 profile5";
+  }
 }
 
 /********* PROFILE ********/
