@@ -1,0 +1,145 @@
+:root {
+  /* Primary */
+  --moderate-violet: hsl(263, 55%, 52%);
+  --very-dark-grayish-blue: hsl(217, 19%, 35%);
+  --very-dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: white;
+
+  /* Neutral */
+  --light-gray: hsl(0, 0%, 81%);
+  --light-grayish-blue: hsl(210, 46%, 95%);
+}
+/********LAYOUT*******/
+body {
+  font-family: "Barlow Semi Condensed", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 13px;
+  background-color: var(--light-grayish-blue);
+  padding: 7%;
+  line-height: 1.5;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "profile1"
+    "profile2"
+    "profile3"
+    "profile4"
+    "profile5";
+  grid-gap: 50px;
+}
+
+@media (min-width: 675px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50% 50%;
+    grid-template-areas:
+      "profile1 profile1 profile2 profile5"
+      "profile3 profile4 profile4 profile5";
+  }
+}
+
+.profile-1 {
+  grid-area: profile1;
+  background-color: var(--moderate-violet);
+  border-radius: 10px;
+}
+
+.profile-2 {
+  grid-area: profile2;
+  background-color: var(--very-dark-grayish-blue);
+  border-radius: 10px;
+}
+
+.profile-3 {
+  grid-area: profile3;
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+.profile-4 {
+  grid-area: profile4;
+  background-color: var(--very-dark-blackish-blue);
+  border-radius: 10px;
+}
+
+.profile-5 {
+  grid-area: profile5;
+  background-color: var(--white);
+  border-radius: 10px;
+}
+
+/********* PROFILE ********/
+.profile {
+  padding: 1.5em;
+}
+.profile-content {
+  display: flex;
+}
+
+.profile-name {
+  margin: 0 1em;
+  color: #fff;
+}
+.profile-name p {
+  margin: 0;
+}
+
+/* .profile-para {
+  color: #fff;
+} */
+
+.proimg {
+  border: 3px solid;
+  border-radius: 50%;
+}
+.quotes {
+  right: 11%;
+  top: 11%;
+}
+
+@media (min-width: 675px) {
+  .quotes {
+    padding: 0;
+    position: absolute;
+    border: none;
+    height: 102px;
+    border-radius: 0;
+    width: 104px;
+    right: 55%;
+    margin-top: -30px;
+    float: none;
+    opacity: 0.5;
+  }
+}
+
+.verified {
+  opacity: 0.5;
+}
+
+.content {
+  opacity: 0.7;
+}
+
+.profile-bold {
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.para {
+  color: #fff;
+}
+
+.attribution {
+  font-size: 0.7rem;
+  text-align: center;
+  margin-top: 7.5em;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
